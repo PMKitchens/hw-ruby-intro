@@ -3,11 +3,14 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  return arr.inject{|sum,x| sum + x }
+  
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  return arr[0] if arr.size == 1
 end
 
 def sum_to_n? arr, n
@@ -17,15 +20,20 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+   return "Hello, " + name 
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+    return false if s =~ /\A[^bcdfghjklmnpqrstvwxyz]/i
+    return true if  s =~ /\A[^aeiou]/i
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  number = s.to_i(2)
+  return false if number != /^[0-1]+$/
+  return false if number == "0"
+  return true if number%4 == 0  
+
 end
 
 # Part 3
